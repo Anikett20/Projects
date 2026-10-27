@@ -1,0 +1,19 @@
+Design Name: rv32im_soc
+Run Directory: /openlane/designs/rv32im_soc/runs/phase5_run1
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/rv32im_soc/runs/phase5_run1/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/rv32im_soc/runs/phase5_run1/logs/signoff/41-rv32im_soc.lef.lvs.log
+Number of nets: 21686                      |Number of nets: 21686                      
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/rv32im_soc/runs/phase5_run1/logs/signoff/44-arc.log
+Pin violations: 507
+Net violations: 336

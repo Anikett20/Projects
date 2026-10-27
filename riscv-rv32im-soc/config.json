@@ -1,0 +1,43 @@
+{
+    "DESIGN_NAME": "rv32im_soc",
+    "VERILOG_FILES": [
+        "dir::src/rv32i_regfile.v",
+        "dir::src/rv32i_imm_gen.v",
+        "dir::src/rv32i_alu.v",
+        "dir::src/rv32im_mdu.v",
+        "dir::src/rv32im_csr.v",
+        "dir::src/rv32i_branch_unit.v",
+        "dir::src/rv32i_decoder.v",
+        "dir::src/rv32i_lsu.v",
+        "dir::src/rv32i_forwarding_unit.v",
+        "dir::src/rv32i_hazard_unit.v",
+        "dir::src/rv32i_core.v",
+        "dir::src/rv32im_uart.v",
+        "dir::src/rv32im_gpio_timer.v",
+        "dir::src/rv32im_spi.v",
+        "dir::src/rv32im_sleep_ctrl.v",
+        "dir::src/rv32im_soc.v"
+    ],
+    "VERILOG_INCLUDE_DIRS": [
+        "dir::src"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "clk",
+    "CLOCK_PERIOD": 20.0,
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 1000 1000",
+    "FP_CORE_UTIL": 30,
+    "PL_TARGET_DENSITY": 0.34,
+    "SYNTH_STRATEGY": "AREA 0",
+    "MAX_FANOUT_CONSTRAINT": 4,
+    "MAX_TRANSITION_CONSTRAINT": 0.75,
+    "PL_RESIZER_MAX_SLEW_MARGIN": 25,
+    "PL_RESIZER_MAX_CAP_MARGIN": 25,
+    "GRT_RESIZER_MAX_SLEW_MARGIN": 25,
+    "GRT_RESIZER_MAX_CAP_MARGIN": 25,
+    "RT_MAX_LAYER": "met5",
+    "GRT_ADJUSTMENT": 0.2,
+    "DIODE_INSERTION_STRATEGY": 0,
+    "GRT_REPAIR_ANTENNAS": 0,
+    "RUN_HEURISTIC_DIODE_INSERTION": 0
+}

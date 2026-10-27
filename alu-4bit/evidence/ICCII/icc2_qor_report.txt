@@ -1,0 +1,86 @@
+****************************************
+Report : qor
+Design : alu_4bit
+Version: V-2023.12-SP4
+Date   : Sat Feb 14 15:56:22 2026
+****************************************
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: no valid parasitic for default corner(EARLY) (NEX-018)
+Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
+Information: The stitching and editing of coupling caps is turned OFF for design 'ALU_LIB:alu_4bit.design'. (TIM-125)
+Warning: The extractor can not be initialized for block 'alu_4bit'. (TIM-103)
+Warning: The extractor can not be initialized for design 'alu_4bit'. Zero interconnect delay is used in timing analysis. (TIM-102)
+Warning: Batch extraction is skipped for block "alu_4bit"
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 226, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                    213
+Buf/Inv Cell Count:                  71
+Buf Cell Count:                       2
+Inv Cell Count:                      69
+Combinational Cell Count:           207
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:                6
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       6
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              375.12
+Noncombinational Area:            42.70
+Buf/Inv Area:                     91.75
+Total Buffer Area:                 4.07
+Total Inverter Area:              87.68
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                     850.90
+Net YLength:                     835.79
+----------------------------------------
+Cell Area (netlist):                            417.81
+Cell Area (netlist and physical only):          417.81
+Net Length:                     1686.69
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               228
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

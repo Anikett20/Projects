@@ -1,0 +1,52 @@
+// =============================================================================
+// Phase 5 Firmware: RV32M + Zicsr + WFI Sleep + Timer IRQ + SPI Master Test
+// =============================================================================
+// PC=0x00: 0x06000093 | addi x1, x0, 0x60           ; x1 = 0x60 (ISR base address)
+// PC=0x04: 0x30509073 | csrrw x0, mtvec, x1         ; mtvec = 0x60
+// PC=0x08: 0x30046073 | csrrsi x0, mstatus, 8       ; mstatus.MIE = 1 (bit 3 enabled!)
+// PC=0x0c: 0x08000113 | addi x2, x0, 0x80           ; x2 = 0x80 (MTIE bit 7)
+// PC=0x10: 0x30412073 | csrrs x0, mie, x2           ; mie.MTIE = 1 (bit 7 enabled!)
+// PC=0x14: 0x4d200093 | addi x1, x0, 1234           ; x1 = 1234
+// PC=0x18: 0x00001137 | lui  x2, 1                  ; x2 = 4096
+// PC=0x1c: 0x62e10113 | addi x2, x2, 1582           ; x2 = 5678 (0x162E)
+// PC=0x20: 0x022081b3 | mul  x3, x1, x2             ; x3 = 1234 * 5678 = 7006652 (0x006AE9BC)
+// PC=0x24: 0x00302023 | sw   x3, 0(x0)              ; DMEM[0x00] = 0x006AE9BC
+// PC=0x28: 0x0211c233 | div  x4, x3, x1             ; x4 = 7006652 / 1234 = 5678 (0x0000162E)
+// PC=0x2c: 0x00402223 | sw   x4, 4(x0)              ; DMEM[0x04] = 0x0000162E
+// PC=0x30: 0x3e800293 | addi x5, x0, 1000           ; x5 = 1000
+// PC=0x34: 0x0251e333 | rem  x6, x3, x5             ; x6 = 7006652 % 1000 = 652 (0x0000028C)
+// PC=0x38: 0x00602423 | sw   x6, 8(x0)              ; DMEM[0x08] = 0x0000028C
+// PC=0x3c: 0x10000537 | lui  x10, 0x10000           ; x10 = 0x1000_0000 (MMIO base)
+// PC=0x40: 0x00352823 | sw   x3, 16(x10)            ; GPIO_OUT (0x1000_0010) = 0x006AE9BC
+// PC=0x44: 0x0c800613 | addi x12, x0, 200           ; x12 = 200 (timer compare target)
+// PC=0x48: 0x02c52223 | sw   x12, 36(x10)           ; TIMER_CMP (0x1000_0024) = 200 (rs1=x10!)
+// PC=0x4c: 0x10500073 | wfi                         ; Enter low-power WFI sleep until timer_cnt >= 200
+// PC=0x50: 0x03c0006f | jal  x0, 0x8c               ; Post-wake: jump over ISR to SPI test at 0x8c
+// PC=0x54: 0x00000013 | nop                         ; Alignment padding
+// PC=0x58: 0x00000013 | nop                         ; Alignment padding
+// PC=0x5c: 0x00000013 | nop                         ; Alignment padding
+// PC=0x60: 0x00000013 | nop                         ; ISR entry at PC=0x60
+// PC=0x64: 0x34202a73 | csrrs x20, mcause, x0       ; x20 = mcause (0x80000007 = Machine Timer IRQ)
+// PC=0x68: 0x01402623 | sw   x20, 12(x0)            ; DMEM[0x0C] = mcause
+// PC=0x6c: 0x34102af3 | csrrs x21, mepc, x0         ; x21 = mepc (0x4c = WFI PC)
+// PC=0x70: 0x004a8a93 | addi x21, x21, 4            ; x21 = mepc + 4 (0x50)
+// PC=0x74: 0x341a9073 | csrrw x0, mepc, x21         ; mepc = 0x50
+// PC=0x78: 0x7ff00613 | addi x12, x0, 0x7ff         ; x12 = 2047 (clear timer IRQ)
+// PC=0x7c: 0x02c52223 | sw   x12, 36(x10)           ; TIMER_CMP (0x1000_0024) = 2047
+// PC=0x80: 0x08000113 | addi x2, x0, 0x80           ; x2 = 0x80 (MTIE mask)
+// PC=0x84: 0x30413073 | csrrc x0, mie, x2           ; Clear mie.MTIE (funct3=3 CSRRC!)
+// PC=0x88: 0x30200073 | mret                        ; Return from ISR to PC=0x50
+// PC=0x8c: 0x00100713 | addi x14, x0, 1             ; x14 = 1 (SPI EN=1, CPOL=0, CPHA=0, 8-bit)
+// PC=0x90: 0x02e52823 | sw   x14, 48(x10)           ; SPI_CTRL (0x1000_0030) = 1
+// PC=0x94: 0x02e52a23 | sw   x14, 52(x10)           ; SPI_CLKDIV (0x1000_0034) = 1
+// PC=0x98: 0x05a00713 | addi x14, x0, 0x5A          ; x14 = 0x5A (SPI TX test byte)
+// PC=0x9c: 0x02e52c23 | sw   x14, 56(x10)           ; SPI_TXDATA (0x1000_0038) = 0x5A (start transfer)
+// PC=0xa0: 0x03c52683 | lw   x13, 60(x10)           ; x13 = SPI_STATUS (0x1000_003C)
+// PC=0xa4: 0x0046f693 | andi x13, x13, 4            ; Check bit 2 (~rx_empty)
+// PC=0xa8: 0xfe068ce3 | beq  x13, x0, -8            ; Wait until RX FIFO has loopback byte
+// PC=0xac: 0x03852703 | lw   x14, 56(x10)           ; x14 = SPI RX byte from 0x1000_0038 (0x5A)
+// PC=0xb0: 0x00e02823 | sw   x14, 16(x0)            ; DMEM[0x10] = 0x0000005A
+// PC=0xb4: 0xcafec7b7 | lui  x15, 0xCAFEC           ; x15 = 0xCAFEC000
+// PC=0xb8: 0xabe78793 | addi x15, x15, -1346        ; x15 = 0xCAFEBABE
+// PC=0xbc: 0x10f02023 | sw   x15, 256(x0)           ; DMEM[0x100] = 0xCAFEBABE
+// PC=0xc0: 0x0000006f | jal  x0, 0                  ; Done (infinite loop)

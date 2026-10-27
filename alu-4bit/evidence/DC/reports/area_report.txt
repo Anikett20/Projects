@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : alu_4bit
+Version: V-2023.12-SP4
+Date   : Sat Feb 14 04:48:10 2026
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt0p78vn40c (File: /ve/ws_home/ws_66/ALU_Project/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db)
+
+Number of ports:                           19
+Number of nets:                           226
+Number of cells:                          213
+Number of combinational cells:            207
+Number of sequential cells:                 6
+Number of macros/black boxes:               0
+Number of buf/inv:                         71
+Number of references:                      10
+
+Combinational area:                375.116557
+Buf/Inv area:                       91.745985
+Noncombinational area:              42.696193
+Macro/Black Box area:                0.000000
+Net Interconnect area:              64.367331
+
+Total cell area:                   417.812750
+Total area:                        482.180082
+1

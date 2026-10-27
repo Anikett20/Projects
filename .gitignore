@@ -1,0 +1,31 @@
+# Simulation and Python output
+**/sim_build/
+__pycache__/
+*.pyc
+*.vvp
+*.vcd
+*.fsdb
+simv
+simv.daidir/
+csrc/
+verdiLog/
+
+# EDA run databases and technology assets
+runs/
+WORK/
+*.db
+*.ndm
+*.nlib
+*.gds
+*.gds.gz
+*.odb
+*.svf
+*.mr
+*.swp
+
+# Local configuration
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

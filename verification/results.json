@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-10-27T11:41:07.836552+00:00",
+  "scope": "Supplied directed simulations; no physical-design rerun",
+  "results": [
+    {
+      "project": "alu-4bit",
+      "status": "passed",
+      "checked_vectors": 9,
+      "covered_opcodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "project": "alu-8bit-datapath",
+      "status": "passed",
+      "checked_alu_vectors": 11,
+      "checked_program_instructions": 8
+    },
+    {
+      "project": "riscv-rv32im-soc",
+      "status": "passed",
+      "completion_cycle": 273,
+      "checked_memory_values": 6,
+      "gpio": "passed",
+      "wfi_timer_wake": "observed",
+      "spi_loopback": "passed"
+    }
+  ]
+}

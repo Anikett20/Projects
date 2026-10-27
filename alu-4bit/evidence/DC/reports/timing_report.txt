@@ -1,0 +1,59 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : alu_4bit
+Version: V-2023.12-SP4
+Date   : Sat Feb 14 04:48:10 2026
+****************************************
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: b[1] (input port clocked by clk)
+  Endpoint: zero_reg (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  alu_4bit           8000                  saed32rvt_tt0p78vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 r
+  b[1] (in)                                0.00       0.20 r
+  U206/Y (INVX0_RVT)                       0.03       0.23 f
+  U164/Y (OR2X1_RVT)                       0.08       0.31 f
+  U163/Y (AND2X1_RVT)                      0.09       0.40 f
+  U144/Y (INVX0_RVT)                       0.04       0.44 r
+  U152/Y (AND2X1_RVT)                      0.07       0.52 r
+  U83/Y (OR2X2_RVT)                        0.08       0.60 r
+  U148/Y (AND2X1_RVT)                      0.08       0.68 r
+  U143/Y (INVX0_RVT)                       0.04       0.72 f
+  U147/Y (AND2X1_RVT)                      0.08       0.80 f
+  U183/Y (OR3X1_RVT)                       0.10       0.90 f
+  U141/Y (AND2X1_RVT)                      0.09       0.99 f
+  U182/Y (AND2X1_RVT)                      0.08       1.07 f
+  U180/Y (AND3X1_RVT)                      0.09       1.16 f
+  zero_reg/D (DFFARX1_RVT)                 0.01       1.17 f
+  data arrival time                                   1.17
+
+  clock clk (rise edge)                    1.20       1.20
+  clock network delay (ideal)              0.00       1.20
+  zero_reg/CLK (DFFARX1_RVT)               0.00       1.20 r
+  library setup time                      -0.10       1.10
+  data required time                                  1.10
+  -----------------------------------------------------------
+  data required time                                  1.10
+  data arrival time                                  -1.17
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.06
+
+
+1
