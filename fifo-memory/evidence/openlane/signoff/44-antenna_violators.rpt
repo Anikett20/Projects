@@ -1,0 +1,5 @@
+Partial/Required:  1.99, Required:    400.0, Partial:   796.64, Net: _0672_, Pin: _1866_/A2, Layer: met3
+Partial/Required:  1.48, Required:    400.0, Partial:   591.79, Net: net34, Pin: fanout144/A, Layer: met1
+Partial/Required:  1.25, Required:    400.0, Partial:   499.78, Net: net1, Pin: _2188_/A, Layer: met1
+Partial/Required:  1.10, Required:    400.0, Partial:   441.89, Net: net21, Pin: _3099_/A1, Layer: met1
+Partial/Required:  1.00, Required:    400.0, Partial:   400.77, Net: _0672_, Pin: _1934_/B1, Layer: met1

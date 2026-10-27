@@ -1,0 +1,47 @@
+VCD info: dumpfile fifo_waveform.vcd opened for output.
+================================================================
+ Starting 32-Bit Synchronous FIFO Memory Verification (16x32)
+================================================================
+
+--- Test 1: Basic 32-Bit Write/Read ---
+PASS: Read 32-bit data[0] = 0xa5a51000
+PASS: Read 32-bit data[1] = 0xa5a51001
+PASS: Read 32-bit data[2] = 0xa5a51002
+PASS: Read 32-bit data[3] = 0xa5a51003
+PASS: Read 32-bit data[4] = 0xa5a51004
+
+--- Test 2: Fill 16x32 FIFO to Full ---
+PASS: FIFO full flag asserted at 16 x 32-bit words
+
+--- Test 3: Empty FIFO & Underflow Detection ---
+PASS: FIFO empty flag asserted
+PASS: Underflow flag asserted on empty read
+
+--- Test 4: Sticky Overflow/Underflow Flag Set & Clear ---
+PASS: Underflow cleared on 32-bit write
+PASS: Overflow flag asserted on full write
+PASS: Overflow cleared on 32-bit read
+
+--- Test 5: Simultaneous 32-Bit Write & Read ---
+PASS: Simultaneous 32-bit write/read test completed
+
+--- Test 6: Threshold Flag (8 x 32-Bit Words) ---
+PASS: Threshold flag asserted at 8 x 32-bit words
+PASS: Threshold flag cleared at 7 x 32-bit words
+
+--- Test 7: Reset Recovery During Operation ---
+PASS: All flags properly reset
+
+--- Test 8: Parameterized 32-Bit Gray-Pointer FIFO (Top) ---
+PASS [Param 32-bit]: Read data[0] = 0xcafe8000
+PASS [Param 32-bit]: Read data[1] = 0xcbff8101
+PASS [Param 32-bit]: Read data[2] = 0xcd008202
+PASS [Param 32-bit]: Read data[3] = 0xce018303
+PASS [Param 32-bit]: Read data[4] = 0xcf028404
+PASS [Param 32-bit]: Full flag verified at 16 x 32-bit words
+PASS [Param 32-bit]: Empty flag verified
+
+================================================================
+ [SELF-CHECK PASS] ALL 32-BIT SYNCHRONOUS FIFO TESTS PASSED!
+================================================================
+fifo-memory/tb/fifo_memory_tb.v:140: $finish called at 6470000 (1ps)

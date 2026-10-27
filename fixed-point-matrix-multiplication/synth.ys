@@ -1,0 +1,6 @@
+# Generic synthesis only; no technology mapping or physical design.
+read_verilog src/*.v
+hierarchy -check -top matrix_multiplication
+synth -top matrix_multiplication
+check -assert
+stat

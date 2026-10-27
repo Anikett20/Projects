@@ -1,0 +1,19 @@
+Design Name: matrix_multiplication
+Run Directory: /openlane/designs/fpmm/runs/fpmm_run1
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/fpmm/runs/fpmm_run1/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/fpmm/runs/fpmm_run1/logs/signoff/41-matrix_multiplication.lef.lvs.log
+Number of nets: 15075                      |Number of nets: 15075                      
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/fpmm/runs/fpmm_run1/logs/signoff/44-arc.log
+Pin violations: 43
+Net violations: 40

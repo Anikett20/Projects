@@ -1,0 +1,19 @@
+Design Name: mips16
+Run Directory: /openlane/designs/mips16/runs/mips16_run1
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/mips16/runs/mips16_run1/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/mips16/runs/mips16_run1/logs/signoff/41-mips16.lef.lvs.log
+Number of nets: 3038                       |Number of nets: 3038                       
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/mips16/runs/mips16_run1/logs/signoff/44-arc.log
+Pin violations: 16
+Net violations: 16

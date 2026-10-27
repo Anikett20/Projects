@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-27T11:41:07.836552+00:00",
+  "checked_at_utc": "2026-10-27T18:14:59.356769+00:00",
   "scope": "Supplied directed simulations; no physical-design rerun",
   "results": [
     {
@@ -30,6 +30,30 @@
       "gpio": "passed",
       "wfi_timer_wake": "observed",
       "spi_loopback": "passed"
+    },
+    {
+      "project": "mips16",
+      "status": "passed",
+      "pass_markers": 9,
+      "testbench": "mips16_tb.v"
+    },
+    {
+      "project": "mips32-pipeline",
+      "status": "passed",
+      "pass_markers": 7,
+      "testbench": "mips_tb.v"
+    },
+    {
+      "project": "fifo-memory",
+      "status": "passed",
+      "pass_markers": 22,
+      "testbench": "fifo_memory_tb.v"
+    },
+    {
+      "project": "fixed-point-matrix-multiplication",
+      "status": "passed",
+      "pass_markers": 16,
+      "testbench": "FPMM_tb.v"
     }
   ]
 }

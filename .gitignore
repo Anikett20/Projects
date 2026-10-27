@@ -29,3 +29,11 @@ WORK/
 !.env.example
 .DS_Store
 Thumbs.db
+
+# Local build and backup files
+**/output/
+*.bak
+*.out
+*.zip
+.tmp.drivedownload/
+.tmp.driveupload/

@@ -1,0 +1,39 @@
+VCD info: dumpfile mips32_waveform.vcd opened for output.
+==========================================================================================
+ 32-Bit 5-Stage Pipelined MIPS Processor Self-Checking Simulation (50 MHz)
+==========================================================================================
+Cycle  0 | PC=0x00000004 | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$00 | WB_Data=0x00000000 | WB_WE=0
+Cycle  1 | PC=0x00000008 | EX_ALU=0x00000003 | MEM_RD=0x00000000 | WB_Reg=$00 | WB_Data=0x00000000 | WB_WE=0
+Cycle  2 | PC=0x0000000c | EX_ALU=0x00000004 | MEM_RD=0x00000000 | WB_Reg=$00 | WB_Data=0x00000000 | WB_WE=1
+Cycle  3 | PC=0x00000014 | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$16 | WB_Data=0x00000003 | WB_WE=1
+Cycle  4 | PC=0x00000018 | EX_ALU=0x00000003 | MEM_RD=0x00000000 | WB_Reg=$17 | WB_Data=0x00000004 | WB_WE=1
+Cycle  5 | PC=0x0000001c | EX_ALU=0x00000001 | MEM_RD=0x00000000 | WB_Reg=$00 | WB_Data=0x00000000 | WB_WE=0
+Cycle  6 | PC=0x00000020 | EX_ALU=0xffffffff | MEM_RD=0x00000000 | WB_Reg=$16 | WB_Data=0x00000003 | WB_WE=0
+Cycle  7 | PC=0x0000000c | EX_ALU=0x00000007 | MEM_RD=0x00000000 | WB_Reg=$18 | WB_Data=0x00000001 | WB_WE=1
+Cycle  8 | PC=0x00000010 | EX_ALU=0x00000001 | MEM_RD=0x00000000 | WB_Reg=$17 | WB_Data=0xffffffff | WB_WE=0
+Cycle  9 | PC=0x00000014 | EX_ALU=0x00000001 | MEM_RD=0x00000000 | WB_Reg=$17 | WB_Data=0x00000007 | WB_WE=0
+Cycle 10 | PC=0x00000018 | EX_ALU=0x00000001 | MEM_RD=0x00000000 | WB_Reg=$19 | WB_Data=0x00000001 | WB_WE=0
+Cycle 11 | PC=0x0000001c | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$16 | WB_Data=0x00000001 | WB_WE=1
+Cycle 12 | PC=0x00000020 | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$17 | WB_Data=0x00000001 | WB_WE=1
+Cycle 13 | PC=0x00000024 | EX_ALU=0x00000002 | MEM_RD=0x00000000 | WB_Reg=$18 | WB_Data=0x00000000 | WB_WE=1
+Cycle 14 | PC=0x00000028 | EX_ALU=0x00000010 | MEM_RD=0x00000000 | WB_Reg=$17 | WB_Data=0x00000000 | WB_WE=0
+Cycle 15 | PC=0x0000002c | EX_ALU=0x00000010 | MEM_RD=0x00000000 | WB_Reg=$19 | WB_Data=0x00000002 | WB_WE=1
+Cycle 16 | PC=0x0000002c | EX_ALU=0x00000011 | MEM_RD=0x00000002 | WB_Reg=$19 | WB_Data=0x00000010 | WB_WE=0
+Cycle 17 | PC=0x00000030 | EX_ALU=0x00000001 | MEM_RD=0x00000000 | WB_Reg=$20 | WB_Data=0x00000002 | WB_WE=1
+Cycle 18 | PC=0x00000034 | EX_ALU=0x00000010 | MEM_RD=0x00000000 | WB_Reg=$20 | WB_Data=0x00000011 | WB_WE=0
+Cycle 19 | PC=0x00000038 | EX_ALU=0x00000001 | MEM_RD=0x00000002 | WB_Reg=$21 | WB_Data=0x00000001 | WB_WE=1
+Cycle 20 | PC=0x0000003c | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$19 | WB_Data=0x00000002 | WB_WE=1
+Cycle 21 | PC=0x00000040 | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$19 | WB_Data=0x00000001 | WB_WE=1
+Cycle 22 | PC=0x00000000 | EX_ALU=0x00000000 | MEM_RD=0x00000000 | WB_Reg=$21 | WB_Data=0x00000000 | WB_WE=1
+Cycle 23 | PC=0x00000004 | EX_ALU=0x00000001 | MEM_RD=0x00000000 | WB_Reg=$00 | WB_Data=0x00000000 | WB_WE=1
+[PASS] $16 = 0x00000001 (XORI $16, $0, 1 after BNE loop)
+[PASS] $17 = 0x00000001 (XORI $17, $0, 1 after BNE loop)
+[PASS] $18 = 0x00000000 (SUB $18, $17, $16 = 0 with EX/MEM & MEM/WB forwarding)
+[PASS] $19 = 0x00000001 (XORI $19, $18, 1 = 1)
+[PASS] $20 = 0x00000002 (LW $20, 16($18) = 2)
+[PASS] $21 = 0x00000000 (SLT Load-Use stall -> XORI $21, $21, 1 -> JR $21 = 0)
+[PASS] DMEM[4] (addr 16) = 0x00000002 (SW $19, 16($18) store forwarding verified)
+==========================================================================================
+ [SELF-CHECK PASS] 32-Bit 5-Stage Pipelined MIPS Verification Complete (0 Errors)!
+==========================================================================================
+mips32-pipeline/tb/mips_tb.v:99: $finish called at 491000 (1ps)

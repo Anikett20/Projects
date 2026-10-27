@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-10-27T18:15:18.777220+00:00",
+  "tool": "Yosys 0.62+14 (git sha1 b890b1b43, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)",
+  "scope": "Generic synthesis and check -assert; no technology mapping or physical-design rerun",
+  "results": [
+    {
+      "project": "mips16",
+      "status": "passed",
+      "warnings": [
+        "Warning: Replacing memory \\memory with list of registers. See src/data_memory.v:28",
+        "Warning: Replacing memory \\registers with list of registers. See src/register_file.v:23"
+      ]
+    },
+    {
+      "project": "mips32-pipeline",
+      "status": "passed",
+      "warnings": [
+        "Warning: Replacing memory \\ArrayReg with list of registers. See src/reg_file.v:292",
+        "Warning: Replacing memory \\datamem with list of registers. See src/data_mem.v:28"
+      ]
+    },
+    {
+      "project": "fifo-memory",
+      "status": "passed",
+      "warnings": [
+        "Warning: Replacing memory \\mem with list of registers. See src/fifo_memo.v:86",
+        "Warning: Replacing memory \\mem with list of registers. See src/fifo_memory.v:92"
+      ]
+    },
+    {
+      "project": "fixed-point-matrix-multiplication",
+      "status": "passed",
+      "warnings": [
+        "Warning: Replacing memory \\matrixA with list of registers. See src/FPMM.v:72",
+        "Warning: Replacing memory \\matrixB with list of registers. See src/FPMM.v:73"
+      ]
+    }
+  ]
+}

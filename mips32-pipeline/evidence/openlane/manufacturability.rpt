@@ -1,0 +1,19 @@
+Design Name: MIPSpipeline
+Run Directory: /openlane/designs/mips32/runs/mips32_run1
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/mips32/runs/mips32_run1/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/mips32/runs/mips32_run1/logs/signoff/41-MIPSpipeline.lef.lvs.log
+Number of nets: 12415                      |Number of nets: 12415                      
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/mips32/runs/mips32_run1/logs/signoff/44-arc.log
+Pin violations: 141
+Net violations: 118

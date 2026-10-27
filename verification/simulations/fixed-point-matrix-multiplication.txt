@@ -1,0 +1,24 @@
+VCD info: dumpfile fpmm_waveform.vcd opened for output.
+=====================================================================
+ 4x4 Q7.8 Fixed-Point Matrix Multiplication Self-Check Verification
+=====================================================================
+[PASS] C[0][0] (idx  0): Got 0x06c0 == Expected 0x06c0 (Sign=0, Int= 6, Frac=192/256)
+[PASS] C[0][1] (idx  1): Got 0x02c0 == Expected 0x02c0 (Sign=0, Int= 2, Frac=192/256)
+[PASS] C[0][2] (idx  2): Got 0x82c0 == Expected 0x82c0 (Sign=1, Int= 2, Frac=192/256)
+[PASS] C[0][3] (idx  3): Got 0x0500 == Expected 0x0500 (Sign=0, Int= 5, Frac=  0/256)
+[PASS] C[1][0] (idx  4): Got 0x8440 == Expected 0x8440 (Sign=1, Int= 4, Frac= 64/256)
+[PASS] C[1][1] (idx  5): Got 0x8260 == Expected 0x8260 (Sign=1, Int= 2, Frac= 96/256)
+[PASS] C[1][2] (idx  6): Got 0x07a0 == Expected 0x07a0 (Sign=0, Int= 7, Frac=160/256)
+[PASS] C[1][3] (idx  7): Got 0x8040 == Expected 0x8040 (Sign=1, Int= 0, Frac= 64/256)
+[PASS] C[2][0] (idx  8): Got 0x03e0 == Expected 0x03e0 (Sign=0, Int= 3, Frac=224/256)
+[PASS] C[2][1] (idx  9): Got 0x03a0 == Expected 0x03a0 (Sign=0, Int= 3, Frac=160/256)
+[PASS] C[2][2] (idx 10): Got 0x0390 == Expected 0x0390 (Sign=0, Int= 3, Frac=144/256)
+[PASS] C[2][3] (idx 11): Got 0x8010 == Expected 0x8010 (Sign=1, Int= 0, Frac= 16/256)
+[PASS] C[3][0] (idx 12): Got 0x0360 == Expected 0x0360 (Sign=0, Int= 3, Frac= 96/256)
+[PASS] C[3][1] (idx 13): Got 0x8100 == Expected 0x8100 (Sign=1, Int= 1, Frac=  0/256)
+[PASS] C[3][2] (idx 14): Got 0x83a0 == Expected 0x83a0 (Sign=1, Int= 3, Frac=160/256)
+[PASS] C[3][3] (idx 15): Got 0x0560 == Expected 0x0560 (Sign=0, Int= 5, Frac= 96/256)
+=====================================================================
+ [SELF-CHECK PASS] All 16 Q7.8 Fixed-Point Matrix Products Verified!
+=====================================================================
+fixed-point-matrix-multiplication/tb/FPMM_tb.v:121: $finish called at 304000000 (1ps)

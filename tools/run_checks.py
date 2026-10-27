@@ -32,7 +32,7 @@ def simulate(project: str, top: str, sources: list[Path]) -> tuple[str, Path]:
                           *map(str, sources)], build)
     output = run(["vvp", str(binary)], build)
     (build / f"{top}.log").write_text(compile_output + output, encoding="utf-8")
-    if re.search(r"\b(?:ERROR|FATAL)\b|timed out", output, re.IGNORECASE):
+    if re.search(r"\b(?:ERROR|FATAL|FAIL)\b|timed out", output, re.IGNORECASE):
         raise AssertionError(output)
     return output, build
 
@@ -158,14 +158,32 @@ def check_riscv() -> dict:
             "gpio": "passed", "wfi_timer_wake": "observed", "spi_loopback": "passed"}
 
 
+def check_added_project(project: str, top: str, bench: str, checks: int) -> dict:
+    directory = ROOT / project
+    output, _ = simulate(project, top,
+        [*sorted((directory / "src").glob("*.v")), directory / "tb" / bench])
+    if "[SELF-CHECK PASS]" not in output:
+        raise AssertionError(f"{project}: completion marker missing")
+    observed_checks = len(re.findall(r"(?:\[PASS\]|^PASS\b)", output, re.MULTILINE))
+    if observed_checks != checks:
+        raise AssertionError(f"{project}: expected {checks} checks, got {observed_checks}")
+    return {"project": project, "status": "passed", "pass_markers": checks,
+            "testbench": bench}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project", choices=("all", "alu4", "alu8", "riscv"), default="all")
+    parser.add_argument("--project", choices=("all", "alu4", "alu8", "riscv",
+                        "mips16", "mips32", "fifo", "fpmm"), default="all")
     args = parser.parse_args()
     for executable in ("iverilog", "vvp"):
         if not shutil.which(executable):
             raise SystemExit(f"Required executable not found: {executable}")
-    checks = {"alu4": check_alu4, "alu8": check_alu8, "riscv": check_riscv}
+    checks = {"alu4": check_alu4, "alu8": check_alu8, "riscv": check_riscv,
+              "mips16": lambda: check_added_project("mips16", "mips16_tb", "mips16_tb.v", 9),
+              "mips32": lambda: check_added_project("mips32-pipeline", "MIPSStimulus", "mips_tb.v", 7),
+              "fifo": lambda: check_added_project("fifo-memory", "tb_fifo_memory", "fifo_memory_tb.v", 22),
+              "fpmm": lambda: check_added_project("fixed-point-matrix-multiplication", "tb_top", "FPMM_tb.v", 16)}
     results = []
     for name, check in checks.items():
         if args.project in ("all", name):

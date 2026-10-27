@@ -1,0 +1,6 @@
+# Generic synthesis only; no technology mapping or physical design.
+read_verilog src/*.v
+hierarchy -check -top fifo_memory
+synth -top fifo_memory
+check -assert
+stat

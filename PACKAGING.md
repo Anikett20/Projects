@@ -18,3 +18,16 @@ Two testbench corrections are included:
 The Python runner checks results from the supplied testbenches rather than accepting a success message or simulator exit code alone. The original 8-bit `soc_core_tb.v` remains as an example; its force/release of individual memory words is simulator-dependent and is not part of the portable check command.
 
 RISC-V report snapshots belong to `phase5_run1`. The repository does not claim that those historical physical-design results were regenerated from this upload. The 4-bit ALU reports come from separate saved tool stages and must not be treated as one completed, signed-off implementation.
+
+## Additional MIPS, FIFO, and matrix projects
+
+Four more project folders were packaged on 27 October 2026:
+
+| Published directory | Original folder under `D:/Projects` |
+| --- | --- |
+| `mips16/` | `16-bit MIPS/` |
+| `mips32-pipeline/` | `32-bit MIPS/` |
+| `fifo-memory/` | `FIFO Memory/` |
+| `fixed-point-matrix-multiplication/` | `Fixed point matrix multiplication/` |
+
+See [the upload audit](verification/UPLOAD_AUDIT.md) for source preservation, the waveform-path correction, runnable entry points, physical-artifact downloads, and remaining gaps. No design RTL was changed for these four uploads. The FIFO's separate structural implementation was added to its published source directory to satisfy the supplied testbench.

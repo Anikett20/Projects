@@ -1,0 +1,37 @@
+VCD info: dumpfile mips16_waveform.vcd opened for output.
+====================================================================================
+ 16-Bit MIPS Single-Cycle Processor Self-Checking Simulation (50 MHz)
+====================================================================================
+Cycle  0 | PC=0x0002 | Inst=0x10bb | ALU=0xfffb | RD1=0x0000 | RD2=0x0000 | WReg=$2 | WData=0xfffb | Zero=0
+Cycle  1 | PC=0x0004 | Inst=0x0298 | ALU=0x0005 | RD1=0x000a | RD2=0xfffb | WReg=$3 | WData=0x0005 | Zero=0
+Cycle  2 | PC=0x0006 | Inst=0x02a1 | ALU=0x000f | RD1=0x000a | RD2=0xfffb | WReg=$4 | WData=0x000f | Zero=0
+Cycle  3 | PC=0x0008 | Inst=0x032a | ALU=0x000a | RD1=0x000a | RD2=0x000f | WReg=$5 | WData=0x000a | Zero=0
+Cycle  4 | PC=0x000a | Inst=0x02f3 | ALU=0x000f | RD1=0x000a | RD2=0x0005 | WReg=$6 | WData=0x000f | Zero=0
+Cycle  5 | PC=0x000c | Inst=0x033c | ALU=0x0005 | RD1=0x000a | RD2=0x000f | WReg=$7 | WData=0x0005 | Zero=0
+Cycle  6 | PC=0x000e | Inst=0x046e | ALU=0x0001 | RD1=0xfffb | RD2=0x000a | WReg=$5 | WData=0x0001 | Zero=0
+Cycle  7 | PC=0x0010 | Inst=0x0777 | ALU=0x000a | RD1=0x0005 | RD2=0x0001 | WReg=$6 | WData=0x000a | Zero=0
+Cycle  8 | PC=0x0012 | Inst=0x29cc | ALU=0x000c | RD1=0x000f | RD2=0x0005 | WReg=$7 | WData=0x000c | Zero=0
+Cycle  9 | PC=0x0014 | Inst=0x3fc3 | ALU=0x000f | RD1=0x000c | RD2=0x000c | WReg=$7 | WData=0x000f | Zero=0
+Cycle 10 | PC=0x0016 | Inst=0x7104 | ALU=0x0004 | RD1=0x0000 | RD2=0x000f | WReg=$4 | WData=0x0004 | Zero=0
+Cycle 11 | PC=0x0018 | Inst=0x6144 | ALU=0x0004 | RD1=0x0000 | RD2=0x0001 | WReg=$5 | WData=0x000f | Zero=0
+Cycle 12 | PC=0x001a | Inst=0x8941 | ALU=0x0000 | RD1=0x000f | RD2=0x000f | WReg=$5 | WData=0x0000 | Zero=1
+Cycle 13 | PC=0x0020 | Inst=0x9281 | ALU=0x000f | RD1=0x000a | RD2=0xfffb | WReg=$2 | WData=0x000f | Zero=0
+Cycle 14 | PC=0x0026 | Inst=0xc195 | ALU=0x1500 | RD1=0x0000 | RD2=0x000a | WReg=$6 | WData=0x1500 | Zero=0
+Cycle 15 | PC=0x0028 | Inst=0xb02e | ALU=0x0000 | RD1=0x0000 | RD2=0x0000 | WReg=$7 | WData=0x002a | Zero=1
+Cycle 16 | PC=0x002e | Inst=0x0718 | ALU=0x0014 | RD1=0x0005 | RD2=0x000f | WReg=$3 | WData=0x0014 | Zero=0
+Cycle 17 | PC=0x0030 | Inst=0xa030 | ALU=0x0000 | RD1=0x0000 | RD2=0x0000 | WReg=$0 | WData=0x0000 | Zero=1
+Cycle 18 | PC=0x0030 | Inst=0xa030 | ALU=0x0000 | RD1=0x0000 | RD2=0x0000 | WReg=$0 | WData=0x0000 | Zero=1
+Cycle 19 | PC=0x0030 | Inst=0xa030 | ALU=0x0000 | RD1=0x0000 | RD2=0x0000 | WReg=$0 | WData=0x0000 | Zero=1
+[PASS] $1 = 0x000a (ADDI $1, $0, 10)
+[PASS] $2 = 0xfffb (ADDI $2, $0, -5)
+[PASS] $3 = 0x0014 (ADD $3, $3, $4 = 20)
+[PASS] $4 = 0x000f (SUB $4, $1, $2 = 15)
+[PASS] $5 = 0x000f (LW $5, 4($0) = 15 & BEQ skip verified)
+[PASS] $6 = 0x1500 (LUI $6, 0x15 & JAL skip verified)
+[PASS] $7 = 0x002a (JAL return address PC+2 = 0x002A)
+[PASS] DMEM[2] = 0x000f (SW $4, 4($0) verified)
+[PASS] Final PC = 0x0030 (J 0x030 halt reached)
+====================================================================================
+ [SELF-CHECK PASS] All 16-Bit MIPS Instructions, Branches, Jumps & Memory Verified!
+====================================================================================
+mips16/tb/mips16_tb.v:111: $finish called at 411000 (1ps)

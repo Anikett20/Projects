@@ -1,0 +1,4 @@
+ceee1bcf1c3a856511a4599aa43b37a68d45292668f0ca01783ddabae4a113bc  mips16-physical-artifacts.zip
+28543ed6e02c63328e1f13f76a89d73dc3a93aa778a4d7b094147bad7987b5b9  mips32-pipeline-physical-artifacts.zip
+d8df991804c99a6be1d85e18b679d44643d0f10221337d20ac693047004242ec  fifo-memory-physical-artifacts.zip
+9d9b6a0c72c27b40e98387c9d5b87b34d4cfd4f7fbad9c232b33ee756eb2659c  fixed-point-matrix-multiplication-physical-artifacts.zip

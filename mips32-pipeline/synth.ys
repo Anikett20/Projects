@@ -1,0 +1,6 @@
+# Generic synthesis only; no technology mapping or physical design.
+read_verilog src/*.v
+hierarchy -check -top MIPSpipeline
+synth -top MIPSpipeline
+check -assert
+stat
