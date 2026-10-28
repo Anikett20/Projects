@@ -1,0 +1,167 @@
+{
+  "added_on": "2026-10-28",
+  "scope": "Supplied synthesis screenshots and schematic PNG exports; no image transformations",
+  "release": "https://github.com/Anikett20/Projects/releases/tag/synthesis-images-2026-10-28",
+  "images": [
+    {
+      "project": "mips16",
+      "source": "16-bit MIPS/16 bit MIPS.png",
+      "published": "mips16/docs/synthesis/mips16-synthesis.png",
+      "storage": "repository",
+      "bytes": 663300,
+      "width": 1920,
+      "height": 1080,
+      "sha256": "483b38d2377f3711ce7b5aeb14b41706fb1d6ba382819f96bf98a6502b05d720"
+    },
+    {
+      "project": "mips16",
+      "source": "16-bit MIPS/mips16_top_schematic.png",
+      "published": "mips16/docs/synthesis/mips16_top_schematic.png",
+      "storage": "repository",
+      "bytes": 1613345,
+      "width": 10770,
+      "height": 1633,
+      "sha256": "82551d137fe74ee26fae982a11135597deda338c8f793b932a6fb933856cb974"
+    },
+    {
+      "project": "mips16",
+      "source": "16-bit MIPS/mips16_ctrl_gates.png",
+      "published": "mips16/docs/synthesis/mips16_ctrl_gates.png",
+      "storage": "repository",
+      "bytes": 1897072,
+      "width": 6809,
+      "height": 2556,
+      "sha256": "ffd04259cc29cf164df8e1d15a7fd53889598e2a0172ccccb7b40f00e19f9278"
+    },
+    {
+      "project": "mips16",
+      "source": "16-bit MIPS/mips16_alu_gates.png",
+      "published": "https://github.com/Anikett20/Projects/releases/download/synthesis-images-2026-10-28/mips16_alu_gates.png",
+      "storage": "release",
+      "bytes": 35836273,
+      "width": 10758,
+      "height": 32767,
+      "sha256": "56c0d23981d9abe1f9c7f0bcd310b28455c4400f33be0dbe8ab9cf3214b3cc1f"
+    },
+    {
+      "project": "mips32-pipeline",
+      "source": "32-bit MIPS/32 bit MIPS.png",
+      "published": "mips32-pipeline/docs/synthesis/mips32-stall-screenshot.png",
+      "storage": "repository",
+      "bytes": 332981,
+      "width": 1920,
+      "height": 1080,
+      "sha256": "8c1cb2a6d63f6506fd73f6ca49945f81f5297bb5f8c8ee8b89c6a4eabad59429"
+    },
+    {
+      "project": "mips32-pipeline",
+      "source": "32-bit MIPS/mips32_top_schematic.png",
+      "published": "https://github.com/Anikett20/Projects/releases/download/synthesis-images-2026-10-28/mips32_top_schematic.png",
+      "storage": "release",
+      "bytes": 10268446,
+      "width": 29855,
+      "height": 6170,
+      "sha256": "6b57828759e4e53184f299840e227c486f462bd4b3ad44a1908515fe2d98a3ae"
+    },
+    {
+      "project": "mips32-pipeline",
+      "source": "32-bit MIPS/mips32_ctrl_gates.png",
+      "published": "mips32-pipeline/docs/synthesis/mips32_ctrl_gates.png",
+      "storage": "repository",
+      "bytes": 774073,
+      "width": 4644,
+      "height": 1296,
+      "sha256": "6113b1aa3c8b81a0099d660e62a91eb0d4b65ae483445c1ad077979888a24085"
+    },
+    {
+      "project": "mips32-pipeline",
+      "source": "32-bit MIPS/mips32_forwarding_gates.png",
+      "published": "mips32-pipeline/docs/synthesis/mips32_forwarding_gates.png",
+      "storage": "repository",
+      "bytes": 385987,
+      "width": 3684,
+      "height": 1346,
+      "sha256": "c27a1768bbe607e686472207baf36c9b083f449d434283fe679b05d91f768b92"
+    },
+    {
+      "project": "mips32-pipeline",
+      "source": "32-bit MIPS/mips32_stall_gates.png",
+      "published": "mips32-pipeline/docs/synthesis/mips32_stall_gates.png",
+      "storage": "repository",
+      "bytes": 838365,
+      "width": 5596,
+      "height": 2015,
+      "sha256": "508b7c343f6afe015bc3484ef6c93fb080d2e047a4787c8d198bcf145add24be"
+    },
+    {
+      "project": "fifo-memory",
+      "source": "FIFO Memory/FIFO MEMORY.png",
+      "published": "fifo-memory/docs/synthesis/fifo32-status-screenshot.png",
+      "storage": "repository",
+      "bytes": 475981,
+      "width": 1920,
+      "height": 1080,
+      "sha256": "5192ac019d9709b46f8585d9ae4317e1fc203ea56d640f1b5b8287cab9962640"
+    },
+    {
+      "project": "fifo-memory",
+      "source": "FIFO Memory/fifo32_top_schematic.png",
+      "published": "fifo-memory/docs/synthesis/fifo32_top_schematic.png",
+      "storage": "repository",
+      "bytes": 274232,
+      "width": 2202,
+      "height": 972,
+      "sha256": "51d255b00538bc7d1394df835ae74c2ea48d8be43e9db9c6670bbada91dd059e"
+    },
+    {
+      "project": "fifo-memory",
+      "source": "FIFO Memory/fifo32_status_gates.png",
+      "published": "fifo-memory/docs/synthesis/fifo32_status_gates.png",
+      "storage": "repository",
+      "bytes": 1786211,
+      "width": 6672,
+      "height": 2840,
+      "sha256": "e4922006f79d6d004aa3229c97f06b6666355732b89da17dca124636f7767cbd"
+    },
+    {
+      "project": "fixed-point-matrix-multiplication",
+      "source": "Fixed point matrix multiplication/FPMM.png",
+      "published": "fixed-point-matrix-multiplication/docs/synthesis/fpmm-synthesis.png",
+      "storage": "repository",
+      "bytes": 1013039,
+      "width": 1920,
+      "height": 1080,
+      "sha256": "7e274db1636ed33e7d706351084c970a6b2d7dd4342258604b1e67cdb57ce7fc"
+    },
+    {
+      "project": "fixed-point-matrix-multiplication",
+      "source": "Fixed point matrix multiplication/fpmm_top_schematic.png",
+      "published": "https://github.com/Anikett20/Projects/releases/download/synthesis-images-2026-10-28/fpmm_top_schematic.png",
+      "storage": "release",
+      "bytes": 13034562,
+      "width": 11605,
+      "height": 9924,
+      "sha256": "b868ced2ad51653adfed19470f726099bc6478bcaf2d5a55d62fbbb943656895"
+    },
+    {
+      "project": "fixed-point-matrix-multiplication",
+      "source": "Fixed point matrix multiplication/fpmm_qadd_gates.png",
+      "published": "https://github.com/Anikett20/Projects/releases/download/synthesis-images-2026-10-28/fpmm_qadd_gates.png",
+      "storage": "release",
+      "bytes": 14528467,
+      "width": 15870,
+      "height": 6971,
+      "sha256": "4bfa5685a57657f8808255046d217b0b7b347d571273d126aefda3e972a1b56c"
+    },
+    {
+      "project": "fixed-point-matrix-multiplication",
+      "source": "Fixed point matrix multiplication/fpmm_qmult_gates.png",
+      "published": "https://github.com/Anikett20/Projects/releases/download/synthesis-images-2026-10-28/fpmm_qmult_gates.png",
+      "storage": "release",
+      "bytes": 80667999,
+      "width": 18762,
+      "height": 32767,
+      "sha256": "219ad2a8f25eb4d6dd851e8df1f175186b4404b69a6bc7ab5a3ae8750380adeb"
+    }
+  ]
+}

@@ -4,6 +4,12 @@ A fixed 4x4 matrix multiplier using 16-bit sign-magnitude Q7.8 values: bit 15 is
 
 `Matrix_A.v` and `ROM.v` contain the input matrices. The datapath forms the 16 dot products with 64 multipliers and 48 adders, stores the results, and streams them on `data_out`. The supplied testbench compares all 16 elements against its expected matrix. No external ROM/IP files are required. Overflow, saturation, and arbitrary-matrix coverage are not established by this one directed example.
 
+## Synthesis images
+
+[![Fixed-point matrix multiplication synthesis screenshot](docs/synthesis/fpmm-synthesis.png)](docs/synthesis/)
+
+[View all 4 synthesis screenshots and schematics](docs/synthesis/), including full-resolution gate diagrams.
+
 ## Run and inspect
 
 From the repository root, with Python 3.10+ and Icarus Verilog installed:

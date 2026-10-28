@@ -59,3 +59,10 @@ See [PACKAGING.md](PACKAGING.md) for source provenance and the small testbench c
 ## Reports and layout downloads
 
 The four MIPS/FIFO/matrix projects include selected reports in Git and complete supplied report/layout bundles in the [physical-artifact release](https://github.com/Anikett20/Projects/releases/tag/project-artifacts-2026-10-27). The release includes GDS files, per-file manifests, and SHA-256 checksums. See the [upload audit](verification/UPLOAD_AUDIT.md) for exactly what is included, missing physical-reproduction inputs, and timing/antenna limitations.
+
+## Synthesis image galleries
+
+- [16-bit MIPS](mips16/docs/synthesis/) - 4 images
+- [32-bit pipelined MIPS](mips32-pipeline/docs/synthesis/) - 5 images
+- [FIFO memory](fifo-memory/docs/synthesis/) - 3 images
+- [Fixed-point matrix multiplication](fixed-point-matrix-multiplication/docs/synthesis/) - 4 images

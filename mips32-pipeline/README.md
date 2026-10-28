@@ -6,6 +6,12 @@ The active program is encoded in `src/instr_mem.v`; `examples/instr.txt` is the 
 
 The supplied directed test checks six final register values and one data-memory value after its branch, jump, load/store, and forwarding sequence. This does not establish full MIPS ISA compliance or exhaustive hazard coverage.
 
+## Synthesis images
+
+[![32-bit pipelined MIPS synthesis screenshot](docs/synthesis/mips32-stall-screenshot.png)](docs/synthesis/)
+
+[View all 5 synthesis screenshots and schematics](docs/synthesis/), including full-resolution gate diagrams.
+
 ## Run and inspect
 
 From the repository root, with Python 3.10+ and Icarus Verilog installed:

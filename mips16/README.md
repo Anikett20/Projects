@@ -12,6 +12,12 @@ The active program is encoded in `src/instruction_memory.v`. The `.hex` files ar
 
 The supplied directed test checks seven final register values, one data-memory value, and the halt-loop PC. `tb/mips16_tb_detailed.v` is retained as an additional trace example; the portable runner selects `mips16_tb` explicitly.
 
+## Synthesis images
+
+[![16-bit MIPS synthesis screenshot](docs/synthesis/mips16-synthesis.png)](docs/synthesis/)
+
+[View all 4 synthesis screenshots and schematics](docs/synthesis/), including full-resolution gate diagrams.
+
 ## Run and inspect
 
 From the repository root, with Python 3.10+ and Icarus Verilog installed:

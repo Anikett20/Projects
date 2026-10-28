@@ -31,3 +31,7 @@ Four more project folders were packaged on 27 October 2026:
 | `fixed-point-matrix-multiplication/` | `Fixed point matrix multiplication/` |
 
 See [the upload audit](verification/UPLOAD_AUDIT.md) for source preservation, the waveform-path correction, runnable entry points, physical-artifact downloads, and remaining gaps. No design RTL was changed for these four uploads. The FIFO's separate structural implementation was added to its published source directory to satisfy the supplied testbench.
+
+## Synthesis images added on 28 October 2026
+
+Added 16 original synthesis screenshots and schematic exports from the four project folders. Eleven PNGs are stored under each project's `docs/synthesis/`; five large PNGs are available in the [synthesis-image release](https://github.com/Anikett20/Projects/releases/tag/synthesis-images-2026-10-28). Project READMEs show a screenshot and link every schematic. No images were resized, recompressed, or otherwise changed. Dimensions, file sizes, source filenames, storage locations, and SHA-256 values are recorded in [verification/synthesis-images.json](verification/synthesis-images.json). The four separate `LinkedIn_*` summary charts are outside this synthesis-image update.

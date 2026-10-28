@@ -4,6 +4,12 @@ Two single-clock FIFO implementations are included: the parameterized `fifo_memo
 
 The eight supplied test suites exercise basic writes/reads, full/empty flags, overflow/underflow, simultaneous activity, threshold flags, reset, and the parameterized implementation. They emit 22 pass messages. The simultaneous-activity suite reports completion without a full data scoreboard, and some stimulus occurs on rising clock edges. Passing this Icarus run is not exhaustive FIFO or simulator-independent verification. Although one implementation uses Gray-coded pointer signals, both use one clock; no asynchronous CDC capability is claimed.
 
+## Synthesis images
+
+[![FIFO memory synthesis screenshot](docs/synthesis/fifo32-status-screenshot.png)](docs/synthesis/)
+
+[View all 3 synthesis screenshots and schematics](docs/synthesis/), including full-resolution gate diagrams.
+
 ## Run and inspect
 
 From the repository root, with Python 3.10+ and Icarus Verilog installed:
